@@ -1,0 +1,26 @@
+svg-icon($url, $width = "", $height = "")
+  display: inline-block
+  background: url($url) no-repeat center
+  background-size: contain
+  vertical-align: middle
+  if $width != ""
+    width: ($width + px)
+  if $height != ""
+    height: ($height + px)
+svg-icon-class($iconName, $width = "", $height = "")
+  .{"i-" + $iconName}
+    svg-icon($images-root + $iconName + ".svg", $width, $height)
+svg-icon-class("face", 80, 80)
+svg-icon-class("money", 80, 80)
+svg-icon-class("person", 80, 80)
+svg-icon-class("refresh", 80, 80)
+png-icon($url, $width, $height)
+  display: inline-block
+  width: ($width + px)
+  height: ($height + px)
+  background: url($url) no-repeat center center
+  background-size: $width + px $height + px
+png-icon-class($iconName, $width, $height)
+  .{"i-" + $iconName}
+    png-icon($images-root + $iconName + ".png", $width, $height)
+//@include icon-png-class('arrival-icon', 11, 11);

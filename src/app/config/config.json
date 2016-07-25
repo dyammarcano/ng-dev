@@ -1,0 +1,11 @@
+{
+  "parameters" : {
+
+  },
+  "configuration": {
+
+  },
+  "server": {
+    "url": "https://api-5622245.rhcloud.com"
+  }
+}
